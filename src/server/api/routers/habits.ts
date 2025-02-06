@@ -3,7 +3,7 @@ import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "@/server/api/trpc";
 import { habits } from "@/server/db/schema";
 
-import { and, eq,sql } from "drizzle-orm";
+import { and, eq, sql } from "drizzle-orm";
 
 export const habitRouter = createTRPCRouter({
   create: protectedProcedure
