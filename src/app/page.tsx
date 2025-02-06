@@ -13,7 +13,6 @@ export default async function Home() {
 
   return (
     <HydrateClient>
-      k
       <main className="flex min-h-screen flex-col items-center justify-center text-black">
         <Link
           href={session ? "/api/auth/signout" : "/api/auth/signin"}
@@ -22,10 +21,10 @@ export default async function Home() {
           {session ? "Sign out" : "Sign in"}
         </Link>
         <div>
-          <CreateHabit />
+         {session?.user && <CreateHabit />}
         </div>
         <div className="mt-4">
-          <UpdateHabit />
+          {session?.user && <UpdateHabit />}
         </div>
       </main>
     </HydrateClient>
