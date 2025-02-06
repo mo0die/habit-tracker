@@ -73,7 +73,8 @@ export const habitRouter = createTRPCRouter({
           counter: habits.counter,
         })
         .from(habits)
-        .where(eq(habits.createdById, ctx.session.user.id));
+        .where(eq(habits.createdById, ctx.session.user.id)).orderBy(habits.id);
+
     } catch (error) {
       console.log(error);
     }
