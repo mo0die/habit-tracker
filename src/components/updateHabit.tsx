@@ -74,12 +74,12 @@ export function UpdateHabit() {
                 <TableCell>{habit.description}</TableCell>
                 <TableCell>{habit.counter}</TableCell>
                 <TableCell>
-                  <Button onClick={() => handleHabitUpdate(habit.id)}>
+                  <Button type="button" onClick={() => handleHabitUpdate(habit.id)}>
                     update
                   </Button>
                 </TableCell>
                 <TableCell>
-                  <Button onClick={() => handleHabitDelete(habit.id)}>
+                  <Button type="button" onClick={() => handleHabitDelete(habit.id)}>
                     Delete
                   </Button>
                 </TableCell>
